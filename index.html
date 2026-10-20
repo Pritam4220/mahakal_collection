@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahakal Collection – Murliganj</title>
+<meta name="description" content="Mahakal Collection, Murliganj – Jeans, T-Shirts, Shirts, Jackets & more at best prices. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#7a1020; --maroon-d:#560a16; --saffron:#f59e0b; --saffron-l:#fde68a;
+    --bg:#fffaf3; --card:#ffffff; --text:#1f1a17; --muted:#6b625b; --line:#eee3d6;
+    --green:#16a34a; --wa:#25d366;
+    --radius:14px; --shadow:0 6px 24px rgba(60,20,10,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+
+  /* top strip */
+  .strip{background:var(--maroon-d);color:var(--saffron-l);font-size:13px;text-align:center;padding:7px 16px}
+  .strip b{color:#fff}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,250,243,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:16px;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .logo .om{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),#ea580c);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700;box-shadow:0 3px 10px rgba(234,88,12,.35)}
+  .logo .name{font-family:"Rozha One",serif;font-size:22px;color:var(--maroon);line-height:1}
+  .logo .name small{display:block;font-family:Poppins;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+  .search{flex:1;max-width:460px;margin-left:auto;position:relative}
+  .search input{width:100%;padding:11px 16px 11px 40px;border-radius:999px;border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;outline:none}
+  .search input:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(245,158,11,.2)}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .menu{display:flex;gap:22px;font-size:14px;font-weight:500}
+  .menu a:hover{color:var(--maroon)}
+  .cart-btn{position:relative;background:var(--maroon);color:#fff;border-radius:999px;padding:10px 16px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;flex-shrink:0}
+  .cart-btn .count{background:var(--saffron);color:var(--maroon-d);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;font-weight:700;padding:0 6px}
+  .cart-btn.bump{animation:bump .35s}
+  @keyframes bump{50%{transform:scale(1.12)}}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:var(--maroon-d);color:#fff}
+  .hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=70") center/cover;opacity:.32}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(86,10,22,.95) 0%,rgba(86,10,22,.6) 55%,rgba(86,10,22,.2) 100%)}
+  .hero .wrap{position:relative;z-index:1;padding-top:72px;padding-bottom:80px}
+  .tag{display:inline-block;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--saffron-l);padding:5px 14px;border-radius:999px;font-size:13px;margin-bottom:18px}
+  .hero h1{font-family:"Rozha One",serif;font-weight:400;font-size:clamp(36px,6vw,64px);line-height:1.05;max-width:640px}
+  .hero h1 span{color:var(--saffron)}
+  .hero p{margin-top:16px;max-width:520px;color:#f3e8e0;font-size:16px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-saffron{background:var(--saffron);color:var(--maroon-d);box-shadow:0 6px 18px rgba(245,158,11,.4)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+  .btn-wa{background:var(--wa);color:#fff}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+  .hero-stats div b{display:block;font-size:26px;color:var(--saffron)}
+  .hero-stats div{font-size:13px;color:#e9d9cf}
+
+  /* features */
+  .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-34px;position:relative;z-index:2}
+  .feat{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+  .feat .ic{font-size:26px;width:46px;height:46px;border-radius:12px;background:#fff4e0;display:grid;place-items:center;flex-shrink:0}
+  .feat b{font-size:14px;display:block}
+  .feat span{font-size:12px;color:var(--muted)}
+
+  section{padding:64px 0 0}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+  .sec-head h2{font-family:"Rozha One",serif;font-weight:400;font-size:clamp(26px,4vw,36px);color:var(--maroon)}
+  .sec-head p{color:var(--muted);font-size:14px}
+
+  /* categories */
+  .cats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .cat{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:#ddd;cursor:pointer}
+  .cat img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .cat:hover img{transform:scale(1.07)}
+  .cat::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(40,5,10,.85),transparent 55%)}
+  .cat span{position:absolute;left:12px;bottom:12px;z-index:1;color:#fff;font-weight:600;font-size:15px}
+  .cat span small{display:block;font-weight:400;font-size:12px;color:var(--saffron-l)}
+
+  /* filters */
+  .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px;font-weight:500;color:var(--text)}
+  .chip.active{background:var(--maroon);border-color:var(--maroon);color:#fff}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .toolbar select{padding:9px 12px;border-radius:10px;border:1px solid var(--line);font:inherit;font-size:14px;background:#fff}
+  .result-count{font-size:14px;color:var(--muted)}
+
+  /* products */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s}
+  .card:hover{transform:translateY(-4px)}
+  .card .img{position:relative;aspect-ratio:1/1.1;background:#f3ece4;overflow:hidden;cursor:pointer}
+  .card .img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .card:hover .img img{transform:scale(1.05)}
+  .badge{position:absolute;top:10px;left:10px;background:var(--green);color:#fff;font-size:12px;font-weight:600;padding:3px 9px;border-radius:6px}
+  .badge.hot{background:#dc2626;left:auto;right:10px}
+  .card .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .card h3{font-size:15px;font-weight:600;line-height:1.3}
+  .card .cat-name{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .rating{font-size:12px;color:var(--muted)}
+  .rating b{background:var(--green);color:#fff;padding:1px 6px;border-radius:4px;font-size:11px;margin-right:4px}
+  .price{display:flex;align-items:baseline;gap:8px}
+  .price b{font-size:19px;color:var(--maroon)}
+  .price s{font-size:13px;color:var(--muted)}
+  .price em{font-style:normal;font-size:12px;color:var(--green);font-weight:600}
+  .sizes{display:flex;gap:6px;flex-wrap:wrap}
+  .size{min-width:34px;padding:4px 6px;border-radius:7px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:500}
+  .size.sel{border-color:var(--maroon);background:#fbeaec;color:var(--maroon)}
+  .add{margin-top:auto;background:var(--maroon);color:#fff;border-radius:10px;padding:10px;font-weight:600;font-size:14px;transition:background .15s}
+  .add:hover{background:var(--maroon-d)}
+  .add.done{background:var(--green)}
+  .empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted)}
+
+  /* offer banner */
+  .offer{margin-top:64px;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;background:linear-gradient(120deg,var(--saffron),#ea580c);color:#fff}
+  .offer .txt{padding:44px}
+  .offer h2{font-family:"Rozha One",serif;font-weight:400;font-size:clamp(28px,4vw,44px);line-height:1.1}
+  .offer p{margin:12px 0 22px;font-size:16px;opacity:.95}
+  .offer .pic{background:url("https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=70") center/cover;min-height:240px}
+  .offer .btn{background:var(--maroon-d);color:#fff}
+
+  /* reviews */
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .review{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .review .stars{color:var(--saffron);letter-spacing:2px}
+  .review p{margin:10px 0 14px;font-size:14px;color:#3b332e}
+  .review .who{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600}
+  .review .av{width:36px;height:36px;border-radius:50%;background:var(--maroon);color:#fff;display:grid;place-items:center;font-size:14px}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+  .visit-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .visit-card h3{font-size:20px;color:var(--maroon);margin-bottom:14px}
+  .info{display:flex;gap:12px;margin-bottom:14px;font-size:14px}
+  .info .ic{font-size:20px}
+  .map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:300px}
+  .map iframe{width:100%;height:100%;min-height:300px;border:0}
+
+  footer{margin-top:72px;background:var(--maroon-d);color:#e9d9cf;padding:44px 0 24px;font-size:14px}
+  .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+  footer h4{color:#fff;margin-bottom:10px}
+  footer li{list-style:none;margin-bottom:6px}
+  footer a:hover{color:var(--saffron)}
+  .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;text-align:center;font-size:12px;color:#c7b2a6}
+
+  /* floating whatsapp */
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:45;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.45)}
+
+  /* drawer */
+  .overlay{position:fixed;inset:0;background:rgba(20,8,5,.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:60}
+  .overlay.open{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:70;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+  .drawer.open{transform:none}
+  .drawer-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .drawer-head h3{color:var(--maroon)}
+  .x{background:none;font-size:26px;line-height:1;color:var(--muted)}
+  .items{flex:1;overflow-y:auto;padding:12px 20px}
+  .item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .item img{width:68px;height:76px;object-fit:cover;border-radius:10px;background:#f3ece4}
+  .item .meta{flex:1;font-size:14px}
+  .item .meta small{color:var(--muted)}
+  .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px;margin-top:6px}
+  .qty button{background:none;width:28px;height:28px;font-size:16px}
+  .qty span{min-width:22px;text-align:center;font-size:14px}
+  .rm{background:none;color:#dc2626;font-size:12px;margin-left:10px}
+  .drawer-foot{padding:18px 20px;border-top:1px solid var(--line)}
+  .row{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+  .row.total{font-size:18px;font-weight:700;color:var(--maroon);margin:10px 0 14px}
+  .drawer-foot input,.drawer-foot textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:14px;margin-bottom:8px}
+  .drawer-foot .btn{width:100%;justify-content:center}
+  .cart-empty{text-align:center;color:var(--muted);padding:60px 10px}
+  .cart-empty div{font-size:48px}
+
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:16px}
+  .modal.open{display:flex}
+  .modal-box{background:#fff;border-radius:18px;max-width:820px;width:100%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;position:relative;max-height:92vh;overflow-y:auto}
+  .modal-box > img{width:100%;height:100%;object-fit:cover;min-height:320px;background:#f3ece4}
+  .modal-box .body{padding:26px;display:flex;flex-direction:column;gap:12px}
+  .modal-box .x{position:absolute;top:10px;right:14px;background:#fff;border-radius:50%;width:36px;height:36px;z-index:2}
+  .modal-box h3{font-size:22px}
+  .modal-box p{font-size:14px;color:var(--muted)}
+
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--text);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;z-index:90;transition:transform .3s}
+  .toast.show{transform:translateX(-50%)}
+
+  @media (max-width:1000px){
+    .menu{display:none}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .cats{grid-template-columns:repeat(3,1fr)}
+    .features{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:720px){
+    .nav{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px}
+    .search{order:3;max-width:none;flex-basis:100%}
+    .cart-btn{margin-left:auto}
+    .cart-btn .lbl{display:none}
+    .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .card .body{padding:10px}
+    .card h3{font-size:13px}
+    .price b{font-size:16px}
+    .reviews,.visit,.foot{grid-template-columns:1fr}
+    .offer{grid-template-columns:1fr}
+    .offer .txt{padding:28px}
+    .modal-box{grid-template-columns:1fr}
+    .modal-box > img{min-height:260px;max-height:340px}
+    .hero .wrap{padding-top:48px;padding-bottom:70px}
+    .hero-stats{gap:22px}
+  }
+  @media (max-width:420px){
+    .features{grid-template-columns:1fr}
+    .logo .name{font-size:19px}
+  }
+</style>
+</head>
+<body>
+
+<div class="strip">🎉 Diwali Offer: <b>Flat 20% OFF</b> on all Jeans · Free delivery in Murliganj</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <div class="om">ॐ</div>
+      <div class="name">Mahakal Collection<small>Murliganj</small></div>
+    </a>
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search" type="search" placeholder="Search jeans, t-shirts, shirts…">
+    </div>
+    <nav class="menu">
+      <a href="#shop">Shop</a>
+      <a href="#offers">Offers</a>
+      <a href="#visit">Visit Store</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      <span class="lbl">Cart</span><span class="count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="tag">🔱 Jai Mahakal · New Festive Collection 2026</span>
+    <h1>Trendy Fashion,<br><span>Best Prices</span> in Murliganj</h1>
+    <p>Jeans, T-Shirts, Shirts, Jackets aur bahut kuch, sab ek hi jagah. Shop online and order directly on WhatsApp.</p>
+    <div class="hero-cta">
+      <a href="#shop" class="btn btn-saffron">Shop Now →</a>
+      <a href="#" class="btn btn-ghost js-wa">💬 Chat on WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>500+</b>Styles in stock</div>
+      <div><b>5000+</b>Happy customers</div>
+      <div><b>₹299</b>T-Shirts from</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="features">
+    <div class="feat"><div class="ic">🚚</div><div><b>Free Delivery</b><span>Within Murliganj</span></div></div>
+    <div class="feat"><div class="ic">💵</div><div><b>Cash on Delivery</b><span>Pay when you receive</span></div></div>
+    <div class="feat"><div class="ic">🔄</div><div><b>Easy Exchange</b><span>7-day size exchange</span></div></div>
+    <div class="feat"><div class="ic">⭐</div><div><b>Top Quality</b><span>Branded-style fabric</span></div></div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <div><h2>Shop by Category</h2><p>Find your style in one tap</p></div>
+    </div>
+    <div class="cats" id="cats"></div>
+  </section>
+
+  <section id="shop">
+    <div class="sec-head">
+      <div><h2>Our Collection</h2><p>Fresh stock, updated every week</p></div>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="toolbar">
+      <span class="result-count" id="resultCount"></span>
+      <select id="sort" aria-label="Sort products">
+        <option value="pop">Sort: Popular</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="disc">Biggest Discount</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <div class="offer" id="offers">
+    <div class="txt">
+      <h2>Combo Offer:<br>Any 3 T-Shirts @ ₹799</h2>
+      <p>Mix and match any colour or size. Limited stock for the festive season, so grab yours before it's gone!</p>
+      <a href="#shop" class="btn js-filter" data-cat="T-Shirts">Grab the Combo →</a>
+    </div>
+    <div class="pic"></div>
+  </div>
+
+  <section>
+    <div class="sec-head"><div><h2>What Customers Say</h2><p>Love from Murliganj and nearby</p></div></div>
+    <div class="reviews">
+      <div class="review"><div class="stars">★★★★★</div><p>"Jeans ki fitting ekdum perfect hai, aur price bhi bahut sahi. Bhaiya ka behaviour bhi bahut accha hai."</p><div class="who"><div class="av">R</div>Rahul K.</div></div>
+      <div class="review"><div class="stars">★★★★★</div><p>"Diwali ke liye shirts liye, quality bahut acchi hai. WhatsApp pe order kiya aur ghar pe delivery mil gayi."</p><div class="who"><div class="av">A</div>Amit S.</div></div>
+      <div class="review"><div class="stars">★★★★☆</div><p>"Latest designs milte hain yahan. Hoodie aur jacket ka collection bhi zabardast hai. Recommended!"</p><div class="who"><div class="av">P</div>Priya M.</div></div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="sec-head"><div><h2>Visit Our Store</h2><p>Come try before you buy</p></div></div>
+    <div class="visit">
+      <div class="visit-card">
+        <h3>ॐ Mahakal Collection</h3>
+        <div class="info"><span class="ic">📍</span><div>Main Market, Murliganj<br>Madhepura, Bihar 852122</div></div>
+        <div class="info"><span class="ic">🕘</span><div>Open daily: 9:00 AM – 9:30 PM</div></div>
+        <div class="info"><span class="ic">📞</span><div>+91 98765 43210 <small style="color:var(--muted)">(demo number)</small></div></div>
+        <div class="info"><span class="ic">📸</span><div><a href="https://www.instagram.com/mahakal_collection_07/" target="_blank" rel="noopener" style="color:var(--maroon);font-weight:600">@mahakal_collection_07</a></div></div>
+        <div class="hero-cta" style="margin-top:18px">
+          <a href="#" class="btn btn-wa js-wa">💬 WhatsApp Us</a>
+          <a href="https://maps.google.com/?q=Murliganj+Madhepura+Bihar" target="_blank" rel="noopener" class="btn btn-saffron">🗺️ Directions</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe loading="lazy" title="Store location" src="https://maps.google.com/maps?q=Murliganj,%20Madhepura,%20Bihar&z=14&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><div class="om">ॐ</div><div class="name" style="color:#fff">Mahakal Collection<small style="color:#c7b2a6">Murliganj</small></div></div>
+        <p>Your trusted clothing shop in Murliganj for men's & women's fashion: jeans, t-shirts, shirts, jackets and festive wear.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul id="footCats"></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#" class="js-wa">Order on WhatsApp</a></li>
+          <li><a href="#visit">Store Location</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Exchange Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Mahakal Collection, Murliganj · Demo website</div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float js-wa" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your Cart</h3><button class="x" id="closeCart" aria-label="Close cart">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="drawer-foot" id="drawerFoot">
+    <div class="row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+    <div class="row"><span>Delivery</span><span id="delivery" style="color:var(--green)">FREE</span></div>
+    <div class="row total"><span>Total</span><span id="total">₹0</span></div>
+    <input id="cName" placeholder="Your name">
+    <textarea id="cAddr" rows="2" placeholder="Delivery address / mobile number"></textarea>
+    <button class="btn btn-wa" id="checkout">💬 Order on WhatsApp</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal">
+  <div class="overlay open" id="modalBg" style="z-index:0"></div>
+  <div class="modal-box" id="modalBox" style="z-index:1"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // Demo WhatsApp number – replace with the shop owner's number (country code, no +)
+  const WA_NUMBER = "919876543210";
+
+  const IMG = id => `https://images.unsplash.com/photo-${id}?w=600&h=660&fit=crop&q=70`;
+  const FALLBACK = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110"><rect width="100" height="110" fill="#f3ece4"/><text x="50" y="62" font-size="34" text-anchor="middle">👕</text></svg>');
+
+  const products = [
+    {id:1, name:"Slim Fit Dark Denim Jeans", cat:"Jeans", price:899, mrp:1599, img:"1542272604-787c3835535d", sizes:["28","30","32","34","36"], rating:4.6, hot:true, desc:"Stretchable slim-fit denim with a dark wash. Perfect for daily wear and parties."},
+    {id:2, name:"Classic Blue Straight Jeans", cat:"Jeans", price:799, mrp:1299, img:"1565084888279-aca607ecce0c", sizes:["28","30","32","34","36","38"], rating:4.4, desc:"Comfort straight fit in classic blue. Durable cotton denim."},
+    {id:3, name:"Stone Wash Regular Jeans", cat:"Jeans", price:949, mrp:1499, img:"1604176354204-9268737828e4", sizes:["30","32","34","36"], rating:4.5, desc:"Trendy stone-wash finish with a regular fit. Pairs with any t-shirt."},
+    {id:4, name:"Plain White Round Neck Tee", cat:"T-Shirts", price:299, mrp:499, img:"1521572163474-6864f9cf17ab", sizes:["S","M","L","XL","XXL"], rating:4.3, desc:"100% cotton, soft and breathable. Must-have basic for every wardrobe."},
+    {id:5, name:"Skeleton Print Black Tee", cat:"T-Shirts", price:349, mrp:599, img:"1503341504253-dff4815485f1", sizes:["S","M","L","XL"], rating:4.5, hot:true, desc:"Cool graphic print on premium black cotton. Youth favourite!"},
+    {id:6, name:"\"Original\" Graphic Tee", cat:"T-Shirts", price:399, mrp:699, img:"1576566588028-4147f3842f27", sizes:["M","L","XL"], rating:4.4, desc:"Bold printed front graphic in a relaxed fit."},
+    {id:7, name:"Black Typography Tee", cat:"T-Shirts", price:349, mrp:599, img:"1583743814966-8936f5b7be1a", sizes:["S","M","L","XL","XXL"], rating:4.2, desc:"Minimal typography print, bio-washed cotton."},
+    {id:8, name:"Oversized Grey Tee", cat:"T-Shirts", price:449, mrp:799, img:"1622445275463-afa2ab738c34", sizes:["M","L","XL"], rating:4.6, hot:true, desc:"Trending oversized drop-shoulder fit. Super comfortable."},
+    {id:9, name:"Premium White Logo Tee", cat:"T-Shirts", price:379, mrp:649, img:"1529374255404-311a2a4f1fd9", sizes:["S","M","L","XL"], rating:4.3, desc:"Heavy-GSM cotton with a subtle chest print."},
+    {id:10, name:"Sky Blue Formal Shirt", cat:"Shirts", price:649, mrp:1099, img:"1589310243389-96a5483213a8", sizes:["38","40","42","44"], rating:4.5, desc:"Crisp formal shirt for office, interviews and functions."},
+    {id:11, name:"Printed Denim Shirt", cat:"Shirts", price:699, mrp:1199, img:"1596755094514-f87e34085b2c", sizes:["M","L","XL"], rating:4.4, desc:"Casual denim shirt with a micro print. Smart and stylish."},
+    {id:12, name:"Formal Shirt Combo (Pack of 3)", cat:"Shirts", price:1499, mrp:2799, img:"1602810318383-e386cc2a3ccf", sizes:["38","40","42","44"], rating:4.7, hot:true, desc:"Grey, white and maroon formal shirts. Best value combo."},
+    {id:13, name:"Leather Biker Jacket", cat:"Jackets", price:1999, mrp:3499, img:"1551028719-00167b16eac5", sizes:["M","L","XL"], rating:4.6, desc:"Faux-leather biker jacket with zip detailing. Winter must-have."},
+    {id:14, name:"Rust Bomber Jacket", cat:"Jackets", price:1299, mrp:2199, img:"1591047139829-d91aecb6caea", sizes:["M","L","XL","XXL"], rating:4.5, desc:"Lightweight bomber in a trendy rust colour."},
+    {id:15, name:"Grey Pullover Hoodie", cat:"Winter Wear", price:799, mrp:1399, img:"1556821840-3a63f95609a7", sizes:["S","M","L","XL"], rating:4.5, desc:"Warm fleece-lined hoodie with a kangaroo pocket."},
+    {id:16, name:"White Crew Sweatshirt", cat:"Winter Wear", price:699, mrp:1199, img:"1620799140408-edc6dcb6d633", sizes:["M","L","XL"], rating:4.3, desc:"Soft brushed-cotton sweatshirt for chilly mornings."},
+    {id:17, name:"Khaki Cotton Chinos", cat:"Trousers", price:749, mrp:1299, img:"1473966968600-fa801b869a1a", sizes:["30","32","34","36"], rating:4.4, desc:"Slim tapered chinos. Smart-casual essential."},
+    {id:18, name:"Ladies Pink Jogger Pants", cat:"Ladies", price:549, mrp:899, img:"1594633312681-425c7b97ccd1", sizes:["S","M","L"], rating:4.3, desc:"Flowy, comfortable joggers with an elastic waist."},
+    {id:19, name:"Crochet Poncho Top", cat:"Ladies", price:599, mrp:999, img:"1434389677669-e08b4cac3105", sizes:["Free Size"], rating:4.4, desc:"Boho-style knitted poncho top. Free size."},
+  ];
+
+  const catImgs = {"Jeans":"1542272604-787c3835535d","T-Shirts":"1618354691373-d851c5c3a990","Shirts":"1602810318383-e386cc2a3ccf","Jackets":"1551028719-00167b16eac5","Winter Wear":"1556821840-3a63f95609a7","Ladies":"1490481651871-ab68de25d43d"};
+  const allCats = ["All", ...new Set(products.map(p=>p.cat))];
+
+  let state = {cat:"All", q:"", sort:"pop"};
+  let cart = [];
+  try { cart = JSON.parse(localStorage.getItem("mc_cart")) || []; } catch(e) {}
+  const selSize = {};
+
+  const $ = s => document.querySelector(s);
+  const rs = n => "₹" + n.toLocaleString("en-IN");
+  const off = p => Math.round((1 - p.price/p.mrp) * 100);
+
+  function renderCats(){
+    $("#cats").innerHTML = Object.entries(catImgs).map(([c,id]) => {
+      const n = products.filter(p=>p.cat===c).length;
+      return `<div class="cat" data-cat="${c}"><img loading="lazy" src="${IMG(id)}" alt="${c}" onerror="this.src='${FALLBACK}'"><span>${c}<small>${n} styles</small></span></div>`;
+    }).join("");
+    $("#chips").innerHTML = allCats.map(c => `<button class="chip ${c===state.cat?"active":""}" data-cat="${c}">${c}</button>`).join("");
+    $("#footCats").innerHTML = allCats.slice(1).map(c => `<li><a href="#shop" class="js-filter" data-cat="${c}">${c}</a></li>`).join("");
+  }
+
+  function renderGrid(){
+    let list = products.filter(p =>
+      (state.cat==="All" || p.cat===state.cat) &&
+      (p.name+" "+p.cat).toLowerCase().includes(state.q.toLowerCase()));
+    if (state.sort==="low") list.sort((a,b)=>a.price-b.price);
+    if (state.sort==="high") list.sort((a,b)=>b.price-a.price);
+    if (state.sort==="disc") list.sort((a,b)=>off(b)-off(a));
+    $("#resultCount").textContent = `${list.length} product${list.length!==1?"s":""}`;
+    $("#grid").innerHTML = list.length ? list.map(p => {
+      const s = selSize[p.id] || p.sizes[Math.min(1,p.sizes.length-1)];
+      selSize[p.id] = s;
+      return `<article class="card">
+        <div class="img" data-view="${p.id}">
+          <img loading="lazy" src="${IMG(p.img)}" alt="${p.name}" onerror="this.src='${FALLBACK}'">
+          <span class="badge">${off(p)}% OFF</span>${p.hot?'<span class="badge hot">🔥 Trending</span>':""}
+        </div>
+        <div class="body">
+          <span class="cat-name">${p.cat}</span>
+          <h3>${p.name}</h3>
+          <div class="rating"><b>${p.rating} ★</b>${Math.round(p.rating*37)} reviews</div>
+          <div class="price"><b>${rs(p.price)}</b><s>${rs(p.mrp)}</s><em>${off(p)}% off</em></div>
+          <div class="sizes">${p.sizes.map(z=>`<button class="size ${z===s?"sel":""}" data-pid="${p.id}" data-size="${z}">${z}</button>`).join("")}</div>
+          <button class="add" data-add="${p.id}">Add to Cart</button>
+        </div>
+      </article>`;
+    }).join("") : `<div class="empty">😕 No products found. Try another search.</div>`;
+  }
+
+  function openModal(id){
+    const p = products.find(x=>x.id===id);
+    const s = selSize[p.id];
+    $("#modalBox").innerHTML = `<button class="x" data-close>×</button>
+      <img src="${IMG(p.img).replace("w=600&h=660","w=900&h=1000")}" alt="${p.name}" onerror="this.src='${FALLBACK}'">
+      <div class="body">
+        <span class="cat-name">${p.cat}</span>
+        <h3>${p.name}</h3>
+        <div class="rating"><b>${p.rating} ★</b>${Math.round(p.rating*37)} reviews</div>
+        <div class="price"><b>${rs(p.price)}</b><s>${rs(p.mrp)}</s><em>${off(p)}% off</em></div>
+        <p>${p.desc}</p>
+        <div><b style="font-size:13px">Select Size</b></div>
+        <div class="sizes">${p.sizes.map(z=>`<button class="size ${z===s?"sel":""}" data-pid="${p.id}" data-size="${z}">${z}</button>`).join("")}</div>
+        <p>✅ Cash on Delivery &nbsp; ✅ 7-day exchange</p>
+        <button class="add" data-add="${p.id}" style="padding:13px">Add to Cart</button>
+        <a href="#" class="btn btn-wa" style="justify-content:center" data-buy="${p.id}">💬 Buy Now on WhatsApp</a>
+      </div>`;
+    $("#modal").classList.add("open");
+  }
+  const closeModal = () => $("#modal").classList.remove("open");
+
+  function save(){ try { localStorage.setItem("mc_cart", JSON.stringify(cart)); } catch(e) {} }
+
+  function addToCart(id){
+    const size = selSize[id];
+    const line = cart.find(l => l.id===id && l.size===size);
+    line ? line.qty++ : cart.push({id, size, qty:1});
+    save(); renderCart();
+    const btn = $("#cartBtn"); btn.classList.remove("bump"); void btn.offsetWidth; btn.classList.add("bump");
+    toast(`Added to cart · Size ${size}`);
+  }
+
+  function renderCart(){
+    const count = cart.reduce((a,l)=>a+l.qty,0);
+    $("#cartCount").textContent = count;
+    if (!cart.length){
+      $("#items").innerHTML = `<div class="cart-empty"><div>🛍️</div><p>Your cart is empty</p><a href="#shop" class="btn btn-saffron" style="margin-top:14px" data-closecart>Start Shopping</a></div>`;
+      $("#drawerFoot").style.display = "none";
+      return;
+    }
+    $("#drawerFoot").style.display = "";
+    $("#items").innerHTML = cart.map((l,i) => {
+      const p = products.find(x=>x.id===l.id);
+      return `<div class="item"><img src="${IMG(p.img)}" alt="" onerror="this.src='${FALLBACK}'">
+        <div class="meta"><b>${p.name}</b><br><small>Size: ${l.size}</small><br><b style="color:var(--maroon)">${rs(p.price*l.qty)}</b><br>
+        <span class="qty"><button data-dec="${i}">−</button><span>${l.qty}</span><button data-inc="${i}">+</button></span><button class="rm" data-rm="${i}">Remove</button></div></div>`;
+    }).join("");
+    const sub = cart.reduce((a,l)=>a+products.find(x=>x.id===l.id).price*l.qty,0);
+    $("#subtotal").textContent = rs(sub);
+    $("#total").textContent = rs(sub);
+  }
+
+  const openCart = () => { $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); };
+  const closeCart = () => { $("#drawer").classList.remove("open"); $("#overlay").classList.remove("open"); };
+
+  function wa(text){ window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, "_blank"); }
+
+  function checkout(){
+    const lines = cart.map((l,i) => {
+      const p = products.find(x=>x.id===l.id);
+      return `${i+1}. ${p.name} (Size ${l.size}) x${l.qty} = ${rs(p.price*l.qty)}`;
+    });
+    const sub = cart.reduce((a,l)=>a+products.find(x=>x.id===l.id).price*l.qty,0);
+    const name = $("#cName").value.trim(), addr = $("#cAddr").value.trim();
+    wa(`🔱 Jai Mahakal! New order from website:\n\n${lines.join("\n")}\n\nTotal: ${rs(sub)}\n\nName: ${name||"-"}\nAddress/Mobile: ${addr||"-"}\nPayment: Cash on Delivery`);
+  }
+
+  let tt;
+  function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("show"),1800); }
+
+  function setCat(c){ state.cat=c; renderCats(); renderGrid(); }
+
+  document.addEventListener("click", e => {
+    const t = e.target.closest("[data-cat],[data-add],[data-view],[data-size],[data-inc],[data-dec],[data-rm],[data-close],[data-buy],[data-closecart],.js-wa");
+    if (!t) return;
+    if (t.classList.contains("js-wa")) { e.preventDefault(); wa("🔱 Jai Mahakal! Mujhe aapke collection ke baare mein jaankari chahiye."); return; }
+    if (t.dataset.cat) { setCat(t.dataset.cat); if (!t.classList.contains("chip")) $("#shop").scrollIntoView({behavior:"smooth"}); if (t.tagName==="A") e.preventDefault(); return; }
+    if (t.dataset.size) { selSize[+t.dataset.pid] = t.dataset.size; t.parentElement.querySelectorAll(".size").forEach(b=>b.classList.toggle("sel", b===t)); renderGridKeepSizes(); return; }
+    if (t.dataset.add) { addToCart(+t.dataset.add); t.textContent="✓ Added"; t.classList.add("done"); setTimeout(()=>{t.textContent="Add to Cart"; t.classList.remove("done");},1200); return; }
+    if (t.dataset.view) { openModal(+t.dataset.view); return; }
+    if (t.dataset.buy) { e.preventDefault(); const p=products.find(x=>x.id===+t.dataset.buy); wa(`🔱 Jai Mahakal! I want to buy:\n${p.name} (Size ${selSize[p.id]}) – ${rs(p.price)}`); return; }
+    if (t.dataset.inc) { cart[+t.dataset.inc].qty++; save(); renderCart(); return; }
+    if (t.dataset.dec) { const l=cart[+t.dataset.dec]; l.qty>1 ? l.qty-- : cart.splice(+t.dataset.dec,1); save(); renderCart(); return; }
+    if (t.dataset.rm) { cart.splice(+t.dataset.rm,1); save(); renderCart(); return; }
+    if ("close" in t.dataset) { closeModal(); return; }
+    if ("closecart" in t.dataset) { closeCart(); return; }
+  });
+  // keep grid size buttons in sync when a size is chosen inside the modal
+  function renderGridKeepSizes(){ if ($("#modal").classList.contains("open")) renderGrid(); }
+
+  $("#cartBtn").onclick = openCart;
+  $("#closeCart").onclick = closeCart;
+  $("#overlay").onclick = closeCart;
+  $("#modalBg").onclick = closeModal;
+  $("#checkout").onclick = checkout;
+  $("#search").addEventListener("input", e => { state.q = e.target.value; renderGrid(); });
+  $("#search").addEventListener("keydown", e => { if (e.key==="Enter") $("#shop").scrollIntoView({behavior:"smooth"}); });
+  $("#sort").onchange = e => { state.sort = e.target.value; renderGrid(); };
+  document.addEventListener("keydown", e => { if (e.key==="Escape") { closeModal(); closeCart(); } });
+
+  renderCats(); renderGrid(); renderCart();
+</script>
+</body>
+</html>
